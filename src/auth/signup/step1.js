@@ -63,7 +63,7 @@ class Step1 extends Component {
           />
           <TouchableOpacity
             style={styles.customButton}
-            onPress={() => this.props.navigation.navigate('Home')}>
+            onPress={() => this.props.navigation.navigate('Payment')}>
             <Text style={styles.customButtonText}>NEXT</Text>
           </TouchableOpacity>
           <View style={styles.forget}>

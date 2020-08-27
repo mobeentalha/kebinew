@@ -20,6 +20,7 @@ import Location from './Screens/Location';
 
 import LoginScreen from './auth/login';
 import SignUpScreen from './auth/signup';
+import Payment from './auth/signup/creditCard';
 
 import SplashScreen from './splashScreen';
 class Splash extends React.Component {
@@ -131,6 +132,10 @@ const Demo = createStackNavigator(
     CreditCard: {
       screen: CreditCard,
     },
+    Payment: {
+      screen: Payment,
+    },
+
     ServiceDetails: {
       screen: ServiceDetails,
     },

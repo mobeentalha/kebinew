@@ -60,8 +60,7 @@ class CreaditCard extends Component {
                     padding: 24,
                     backgroundColor: '#2cc8de',
                     borderRadius: 20,
-                  }}
-                  onPress={() => this.props.navigation.navigate('CreditCard')}>
+                  }}>
                   <Text>Service 1</Text>
                 </TouchableOpacity>
                 <TouchableOpacity

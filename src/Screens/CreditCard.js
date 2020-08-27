@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   StyleSheet,
   Text,
@@ -8,12 +8,12 @@ import {
   ScrollView,
   TouchableOpacity,
   ImageBackground,
-} from "react-native";
-import { BackF, ImageF } from "../../assets/images";
+} from 'react-native';
+import {BackF, ImageF} from '../../assets/images';
 
 class CreaditCard extends Component {
   static navigationOptions = {
-    drawerLabel: "Credit Card",
+    drawerLabel: 'Credit Card',
     // drawerIcon: ({ tintColor }) => (
     //   <Image
     //     source={ImageF}
@@ -24,10 +24,10 @@ class CreaditCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      country: "uk",
-      day: "",
-      month: "",
-      year: "",
+      country: 'uk',
+      day: '',
+      month: '',
+      year: '',
       days: [
         {
           label: `Day`,
@@ -91,32 +91,30 @@ class CreaditCard extends Component {
   }
 
   render() {
-    console.log("daysss===============", [...this.state.days]);
+    console.log('daysss===============', [...this.state.days]);
     return (
       <View style={styles.container}>
         <View style={styles.image}>
           <View style={styles.bar}>
             <ImageBackground
               style={{
-                width: "100%",
-                height: "100%",
-                justifyContent: "center",
-                alignItems: "center",
+                width: '100%',
+                height: '100%',
+                justifyContent: 'center',
+                alignItems: 'center',
               }}
-              source={require("../../assets/images/top.jpg")}
-            >
+              source={require('../../assets/images/top.jpg')}>
               <Text style={styles.HeadingText}> Credit Card </Text>
             </ImageBackground>
           </View>
-          <View style={{ flex: 1 }}>
+          <View style={{flex: 1}}>
             <ScrollView>
               <View
                 style={{
                   flex: 1,
                   padding: 32,
-                  justifyContent: "space-evenly",
-                }}
-              >
+                  justifyContent: 'space-evenly',
+                }}>
                 <TextInput
                   keyboardType="number-pad"
                   placeholder="Card No"
@@ -131,10 +129,9 @@ class CreaditCard extends Component {
                 />
                 <View
                   style={{
-                    flexDirection: "row",
-                    justifyContent: "space-evenly",
-                  }}
-                >
+                    flexDirection: 'row',
+                    justifyContent: 'space-evenly',
+                  }}>
                   <TextInput
                     keyboardType="number-pad"
                     // placeholder="Card Title"
@@ -154,21 +151,20 @@ class CreaditCard extends Component {
                     style={styles.input}
                   />
                 </View>
-                <View style={{ alignItems: "center", marginTop: "5%" }}>
+                <View style={{alignItems: 'center', marginTop: '5%'}}>
                   <TouchableOpacity
                     style={{
-                      backgroundColor: "#2cc8de",
+                      backgroundColor: '#2cc8de',
                       paddingVertical: 12,
                       paddingHorizontal: 18,
                       borderRadius: 10,
                     }}
-                  >
+                    onPress={() => this.props.navigation.navigate('Home')}>
                     <Text
                       style={{
-                        color: "#fff",
+                        color: '#fff',
                         fontSize: 18,
-                      }}
-                    >
+                      }}>
                       Confirm
                     </Text>
                   </TouchableOpacity>
@@ -177,16 +173,15 @@ class CreaditCard extends Component {
 
               <View
                 style={{
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}>
                 <Image
-                  style={{ width: "28%", height: "38%", alignSelf: "center" }}
+                  style={{width: '28%', height: '38%', alignSelf: 'center'}}
                   source={ImageF}
                 />
               </View>
-              <View style={{ marginBottom: 100 }} />
+              <View style={{marginBottom: 100}} />
             </ScrollView>
           </View>
         </View>
@@ -202,9 +197,9 @@ const styles = StyleSheet.create({
   bar: {
     // marginTop: "15%",
     flex: 0.15,
-    backgroundColor: "#2cc8de",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: '#2cc8de',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   image: {
     // width: "100%",
@@ -213,58 +208,58 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   HeadingText: {
-    color: "#fff",
+    color: '#fff',
     fontSize: 30,
-    fontWeight: "bold",
-    textAlign: "center",
+    fontWeight: 'bold',
+    textAlign: 'center',
     paddingTop: 25,
   },
   input: {
-    borderColor: "#5b82e9",
-    color: "#5b82e9",
+    borderColor: '#5b82e9',
+    color: '#5b82e9',
     borderWidth: 1,
     borderRadius: 10,
-    backgroundColor: "transparent",
+    backgroundColor: 'transparent',
     paddingHorizontal: 15,
     // height: "8%",
     // width: "80%",
     flex: 2,
-    marginTop: "5%",
+    marginTop: '5%',
     marginHorizontal: 4,
   },
   activeText: {
-    color: "#4f93e6",
+    color: '#4f93e6',
     fontSize: 20,
-    fontWeight: "bold",
-    textAlign: "center",
-    paddingLeft: "5%",
+    fontWeight: 'bold',
+    textAlign: 'center',
+    paddingLeft: '5%',
   },
   text: {
-    color: "#4f93e6",
+    color: '#4f93e6',
     fontSize: 15,
-    fontWeight: "bold",
-    textAlign: "center",
-    paddingLeft: "5%",
+    fontWeight: 'bold',
+    textAlign: 'center',
+    paddingLeft: '5%',
   },
   steps: {
-    textAlign: "center",
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "row",
-    width: "100%",
-    height: "5%",
-    backgroundColor: "white",
+    textAlign: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+    width: '100%',
+    height: '5%',
+    backgroundColor: 'white',
   },
   logo: {
-    backgroundColor: "transparent",
-    width: "80%",
-    height: "30%",
-    marginTop: "30%",
-    justifyContent: "center",
-    alignItems: "center",
+    backgroundColor: 'transparent',
+    width: '80%',
+    height: '30%',
+    marginTop: '30%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   logoImage: {
-    width: "30%",
-    height: "50%",
+    width: '30%',
+    height: '50%',
   },
 });

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 import {
   StyleSheet,
   Text,
@@ -6,27 +6,21 @@ import {
   Image,
   TouchableOpacity,
   TextInput,
-} from "react-native";
-import {
-  ImageF,
-  ApplePay,
-  GiftCard,
-  Pay,
-  PayPal,
-} from "../../../assets/images";
-import { Icon, Right } from "native-base";
+} from 'react-native';
+import {ImageF, ApplePay, GiftCard, Pay, PayPal} from '../../../assets/images';
+import {Icon, Right} from 'native-base';
 class CreditCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
       initialLoading: true,
-      paymentMethod: "default",
+      paymentMethod: 'default',
     };
     this.changePayMethod = this.changePayMethod.bind(this);
   }
   changePayMethod(val) {
-    console.log("Value : ", val);
-    this.setState({ payementMethod: val });
+    console.log('Value : ', val);
+    this.setState({payementMethod: val});
   }
   render() {
     return (
@@ -60,15 +54,13 @@ class CreditCard extends Component {
           </View>
           <TouchableOpacity
             style={styles.customButton}
-            onPress={this.props.loginUser}
-          >
+            onPress={() => this.props.navigation.navigate('CreditCard')}>
             <Text style={styles.customButtonText}>CONFIRM</Text>
           </TouchableOpacity>
           <View style={styles.forget}>
             <Text
               style={styles.text1}
-              onPress={() => this.props.onScreenChange("SIGN_IN")}
-            >
+              onPress={() => this.props.onScreenChange('SIGN_IN')}>
               Have account? SIGN IN!
             </Text>
           </View>
@@ -84,124 +76,124 @@ export default CreditCard;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: 'white',
   },
   bar: {
-    marginTop: "15%",
-    backgroundColor: "#2cc8de",
+    marginTop: '15%',
+    backgroundColor: '#2cc8de',
   },
   image: {
-    width: "100%",
-    height: "100%",
-    backgroundColor: "white",
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'white',
   },
   HeadingText: {
-    color: "#fff",
+    color: '#fff',
     fontSize: 30,
-    fontWeight: "bold",
-    textAlign: "center",
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
   payementView: {
-    width: "100%",
-    height: "20%",
-    backgroundColor: "white",
-    flexDirection: "column",
+    width: '100%',
+    height: '20%',
+    backgroundColor: 'white',
+    flexDirection: 'column',
   },
   input: {
-    borderColor: "#5b82e9",
-    color: "#5b82e9",
+    borderColor: '#5b82e9',
+    color: '#5b82e9',
     borderWidth: 1,
     borderRadius: 10,
-    backgroundColor: "transparent",
+    backgroundColor: 'transparent',
     paddingHorizontal: 15,
-    height: "10%",
-    width: "100%",
-    marginTop: "5%",
+    height: '10%',
+    width: '100%',
+    marginTop: '5%',
   },
   payDetailForm: {
-    width: "100%",
-    height: "80%",
+    width: '100%',
+    height: '80%',
   },
   iconViewMain: {
-    width: "100%",
-    height: "80%",
-    flexDirection: "row",
-    alignItems: "center",
-    borderColor: "#5b82e9",
+    width: '100%',
+    height: '80%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderColor: '#5b82e9',
     borderTopWidth: 0.5,
     borderBottomWidth: 0.5,
   },
   iconView: {
-    width: "5%",
-    height: "20%",
-    marginBottom: "5%",
-    marginLeft: "5%",
+    width: '5%',
+    height: '20%',
+    marginBottom: '5%',
+    marginLeft: '5%',
   },
   icon: {
-    width: "100%",
-    height: "100%",
+    width: '100%',
+    height: '100%',
   },
   text: {
-    color: "#4f93e6",
+    color: '#4f93e6',
     fontSize: 15,
-    fontWeight: "bold",
-    marginLeft: "5%",
-    width: "60%",
+    fontWeight: 'bold',
+    marginLeft: '5%',
+    width: '60%',
   },
   text1: {
-    color: "#4f93e6",
+    color: '#4f93e6',
     fontSize: 15,
-    fontWeight: "bold",
-    textAlign: "center",
-    marginLeft: "15%",
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginLeft: '15%',
   },
   textIcon: {
-    color: "#4f93e6",
+    color: '#4f93e6',
     fontSize: 15,
-    fontWeight: "bold",
+    fontWeight: 'bold',
     paddingLeft: 20,
   },
   form: {
-    width: "100%",
-    height: "80%",
-    marginTop: "5%",
+    width: '100%',
+    height: '80%',
+    marginTop: '5%',
   },
   form1: {
-    width: "100%",
-    height: "80%",
-    marginTop: "5%",
+    width: '100%',
+    height: '80%',
+    marginTop: '5%',
   },
   customButton: {
-    backgroundColor: "#2cc8de",
+    backgroundColor: '#2cc8de',
     marginTop: 20,
-    height: "5%",
+    height: '5%',
     borderRadius: 50,
-    width: "80%",
-    justifyContent: "center",
+    width: '80%',
+    justifyContent: 'center',
   },
   customButtonText: {
-    color: "white",
-    textAlign: "center",
+    color: 'white',
+    textAlign: 'center',
     fontSize: 20,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   forget: {
-    backgroundColor: "transparent",
-    width: "80%",
-    height: "10%",
-    marginTop: "0%",
-    justifyContent: "center",
+    backgroundColor: 'transparent',
+    width: '80%',
+    height: '10%',
+    marginTop: '0%',
+    justifyContent: 'center',
   },
   logo: {
-    backgroundColor: "transparent",
-    width: "80%",
-    height: "30%",
-    marginTop: "1%",
-    justifyContent: "center",
-    alignItems: "center",
+    backgroundColor: 'transparent',
+    width: '80%',
+    height: '30%',
+    marginTop: '1%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   logoImage: {
-    width: "30%",
-    height: "50%",
+    width: '30%',
+    height: '50%',
   },
 });
