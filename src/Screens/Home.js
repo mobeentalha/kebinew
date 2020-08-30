@@ -51,7 +51,8 @@ class CreaditCard extends Component {
                   paddingHorizontal: 16,
                 }}>
                 <TouchableOpacity
-                  onPress={() => this.props.navigation.openDrawer()}>
+                // onPress={() => this.props.navigation.openDrawer()}
+                >
                   <Image
                     resizeMode="cover"
                     style={{height: 40, width: 40}}
