@@ -84,7 +84,27 @@ class CreaditCard extends Component {
               </View>
 
               {/* <View style={{ marginBottom: 100 }} /> */}
+              <TouchableOpacity
+                style={{
+                  backgroundColor: '#2cc8de',
+                  paddingVertical: 12,
+                  paddingHorizontal: 18,
+                  borderRadius: 10,
+                  width: '20%',
+                  marginTop: 20,
+                  marginLeft: 40,
+                }}
+                onPress={() => this.props.navigation.goBack()}>
+                <Text
+                  style={{
+                    color: '#fff',
+                    fontSize: 18,
+                  }}>
+                  Back
+                </Text>
+              </TouchableOpacity>
             </ScrollView>
+
             <View
               style={{
                 alignItems: 'center',
@@ -121,7 +141,7 @@ const styles = StyleSheet.create({
   image: {
     // width: "100%",
     // height: "100%",
-    // backgroundColor: "white",
+    backgroundColor: 'white',
     flex: 1,
   },
   HeadingText: {
@@ -129,7 +149,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 'bold',
     textAlign: 'center',
-    paddingTop: 25,
+    // paddingTop: 25,
   },
   input: {
     borderColor: '#5b82e9',

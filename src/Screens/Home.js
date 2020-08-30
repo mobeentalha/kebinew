@@ -127,6 +127,22 @@ class CreaditCard extends Component {
                     source={require('../../assets/images/icons/Tool3dp-1.png')}
                   />
                 </TouchableOpacity>
+                <TouchableOpacity
+                  style={{
+                    backgroundColor: '#2cc8de',
+                    paddingVertical: 12,
+                    paddingHorizontal: 18,
+                    borderRadius: 10,
+                  }}
+                  onPress={() => this.props.navigation.goBack()}>
+                  <Text
+                    style={{
+                      color: '#fff',
+                      fontSize: 18,
+                    }}>
+                    Back
+                  </Text>
+                </TouchableOpacity>
               </View>
 
               {/* <View style={{ marginBottom: 100 }} /> */}
@@ -167,7 +183,7 @@ const styles = StyleSheet.create({
   image: {
     // width: "100%",
     // height: "100%",
-    // backgroundColor: "white",
+    backgroundColor: 'white',
     flex: 1,
   },
   HeadingText: {

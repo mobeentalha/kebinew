@@ -20,7 +20,7 @@ import Location from './Screens/Location';
 
 import LoginScreen from './auth/login';
 import SignUpScreen from './auth/signup';
-import Payment from './auth/signup/creditCard';
+import Payment from './auth/signup/step2-1';
 
 import SplashScreen from './splashScreen';
 class Splash extends React.Component {

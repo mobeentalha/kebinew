@@ -111,7 +111,7 @@ class CreaditCard extends Component {
             <ScrollView>
               <View
                 style={{
-                  flex: 1,
+                  // flex: 1,
                   padding: 32,
                   justifyContent: 'space-evenly',
                 }}>
@@ -151,7 +151,29 @@ class CreaditCard extends Component {
                     style={styles.input}
                   />
                 </View>
-                <View style={{alignItems: 'center', marginTop: '5%'}}>
+                <View
+                  style={{
+                    alignItems: 'center',
+                    marginTop: '5%',
+                    flexDirection: 'row',
+                    justifyContent: 'space-evenly',
+                  }}>
+                  <TouchableOpacity
+                    style={{
+                      backgroundColor: '#2cc8de',
+                      paddingVertical: 12,
+                      paddingHorizontal: 18,
+                      borderRadius: 10,
+                    }}
+                    onPress={() => this.props.navigation.goBack()}>
+                    <Text
+                      style={{
+                        color: '#fff',
+                        fontSize: 18,
+                      }}>
+                      Back
+                    </Text>
+                  </TouchableOpacity>
                   <TouchableOpacity
                     style={{
                       backgroundColor: '#2cc8de',
@@ -173,8 +195,10 @@ class CreaditCard extends Component {
 
               <View
                 style={{
+                  // flex: 1,
                   alignItems: 'center',
                   justifyContent: 'center',
+                  marginTop: 32,
                 }}>
                 <Image
                   style={{width: '28%', height: '38%', alignSelf: 'center'}}
@@ -204,7 +228,7 @@ const styles = StyleSheet.create({
   image: {
     // width: "100%",
     // height: "100%",
-    // backgroundColor: "white",
+    backgroundColor: 'white',
     flex: 1,
   },
   HeadingText: {
@@ -212,7 +236,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 'bold',
     textAlign: 'center',
-    paddingTop: 25,
+    // paddingTop: 25,
   },
   input: {
     borderColor: '#5b82e9',
@@ -221,11 +245,13 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: 'transparent',
     paddingHorizontal: 15,
-    // height: "8%",
-    // width: "80%",
-    flex: 2,
+    lineHeight: 20,
+    // height: '8%',
+    // width: '100%',
+    flex: 1,
     marginTop: '5%',
     marginHorizontal: 4,
+    // backgroundColor: 'red',
   },
   activeText: {
     color: '#4f93e6',
