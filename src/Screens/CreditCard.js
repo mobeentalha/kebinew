@@ -8,6 +8,7 @@ import {
   ScrollView,
   TouchableOpacity,
   ImageBackground,
+  Dimensions,
 } from 'react-native';
 import {BackF, ImageF} from '../../assets/images';
 
@@ -193,7 +194,7 @@ class CreaditCard extends Component {
                 </View>
               </View>
 
-              <View
+              {/* <View
                 style={{
                   // flex: 1,
                   alignItems: 'center',
@@ -205,8 +206,24 @@ class CreaditCard extends Component {
                   source={ImageF}
                 />
               </View>
-              <View style={{marginBottom: 100}} />
+              <View style={{marginBottom: 100}} /> */}
             </ScrollView>
+            <View
+              style={{
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginTop: 20,
+                position: 'absolute',
+                top: Dimensions.get('screen').height - 300,
+                right: 0,
+                left: 0,
+                bottom: 0,
+              }}>
+              <Image
+                style={{width: '25%', height: '70%', alignSelf: 'center'}}
+                source={ImageF}
+              />
+            </View>
           </View>
         </View>
       </View>
