@@ -73,11 +73,13 @@ class CreaditCard extends Component {
                   <Text>Service 1</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('Location')}
                   style={{
                     marginTop: 20,
                     padding: 24,
                     backgroundColor: '#2cc8de',
                     borderRadius: 20,
+                    
                   }}>
                   <Text>Service 1</Text>
                 </TouchableOpacity>
@@ -117,7 +119,7 @@ class CreaditCard extends Component {
                 bottom: 0,
               }}>
               <Image
-                style={{width: '25%', height: '70%', alignSelf: 'center'}}
+                style={{width: '30%', height: '23%', alignSelf: 'center'}}
                 source={ImageF}
               />
             </View>
@@ -131,6 +133,7 @@ export default CreaditCard;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'white'
   },
   bar: {
     flex: 0.15,
@@ -149,7 +152,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 'bold',
     textAlign: 'center',
-    // paddingTop: 25,
+    paddingTop: '5%',
   },
   input: {
     borderColor: '#5b82e9',

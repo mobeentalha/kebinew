@@ -12,9 +12,9 @@ import {
 } from 'react-native';
 import {BackF, ImageF} from '../../assets/images';
 
-class CreaditCard extends Component {
+class MyAccount extends Component {
   static navigationOptions = {
-    drawerLabel: 'Home',
+    drawerLabel: 'My Account',
     // drawerIcon: ({ tintColor }) => (
     //   // <Image
     //   //   source={ImageF}
@@ -30,7 +30,6 @@ class CreaditCard extends Component {
   componentDidMount() {}
 
   render() {
-    console.log('home props :: ', this.props)
     return (
       <View style={styles.container}>
         <View style={styles.image}>
@@ -61,95 +60,13 @@ class CreaditCard extends Component {
                     source={require('../../assets/images/icons/menu.png')}
                   />
                 </TouchableOpacity>
-                <Text style={styles.HeadingText}> Home </Text>
+                <Text style={styles.HeadingText}> My Account </Text>
                 <View style={{flex: 0.2}}></View>
               </View>
             </ImageBackground>
           </View>
           <View style={{flex: 1}}>
-            <ScrollView
-              style={{maxHeight: Dimensions.get('screen').height - 280}}>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  flexWrap: 'wrap',
-                  justifyContent: 'space-evenly',
-                }}>
-                <TouchableOpacity
-                  style={{
-                    marginTop: 20,
-                    padding: 24,
-                    // backgroundColor: "#2cc8de",
-                    borderRadius: 20,
-                  }}
-                  onPress={() =>
-                    this.props.navigation.navigate('ServiceDetails')
-                  }>
-                  <Image
-                    resizeMode="cover"
-                    style={{height: 130, width: 130}}
-                    source={require('../../assets/images/icons/L3dp2.png')}
-                  />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  style={{
-                    marginTop: 20,
-                    padding: 24,
-                    // backgroundColor: "#2cc8de",
-                    borderRadius: 20,
-                  }}>
-                  <Image
-                    resizeMode="cover"
-                    style={{height: 130, width: 130}}
-                    source={require('../../assets/images/icons/Lawn3dp-1.png')}
-                  />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  style={{
-                    marginTop: 20,
-                    padding: 24,
-                    // backgroundColor: "#2cc8de",
-                    borderRadius: 20,
-                  }}>
-                  <Image
-                    resizeMode="cover"
-                    style={{height: 130, width: 130}}
-                    source={require('../../assets/images/icons/maid3dp-11.png')}
-                  />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  style={{
-                    marginTop: 20,
-                    padding: 24,
-                    // backgroundColor: "#2cc8de",
-                    borderRadius: 20,
-                  }}>
-                  <Image
-                    resizeMode="cover"
-                    style={{height: 130, width: 130}}
-                    source={require('../../assets/images/icons/Tool3dp-1.png')}
-                  />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  style={{
-                    backgroundColor: '#2cc8de',
-                    paddingVertical: 12,
-                    paddingHorizontal: 18,
-                    borderRadius: 10,
-                  }}
-                  onPress={() => this.props.navigation.goBack()}>
-                  <Text
-                    style={{
-                      color: '#fff',
-                      fontSize: 18,
-                    }}>
-                    Back
-                  </Text>
-                </TouchableOpacity>
-              </View>
-
-              {/* <View style={{ marginBottom: 100 }} /> */}
-            </ScrollView>
+            
             <View
               style={{
                 alignItems: 'center',
@@ -172,7 +89,7 @@ class CreaditCard extends Component {
     );
   }
 }
-export default CreaditCard;
+export default MyAccount;
 const styles = StyleSheet.create({
   container: {
     flex: 1,

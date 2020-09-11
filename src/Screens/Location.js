@@ -48,42 +48,56 @@ class Location extends Component {
             </ImageBackground>
           </View>
           <View style={{ flex: 1 }}>
-            <View style={{ flex: 0.8 }}>
-              <MapView
-                provider={PROVIDER_GOOGLE}
-                region={{
-                  latitude: 37.78825,
-                  longitude: -122.4324,
-                  latitudeDelta: 0.015,
-                  longitudeDelta: 0.0121,
-                }}
-                showsMyLocationButton={true}
-                showsUserLocation={true}
-                showsCompass={true}
-                rotateEnabled={true}
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                }}
-              ></MapView>
+            <View style={{margin: '5%', height: '75%'}}>
+              <View style={{ flex: 1}}>
+                <TextInput
+                  placeholder="Pick up Location"
+                  placeholderTextColor="#5b82e9"
+                  style={styles.input}
+                />
+                <TextInput
+                  placeholder="Drop off Location"
+                  placeholderTextColor="#5b82e9"
+                  style={styles.input}
+                />
+              </View>
+              <View style={{ flex: 4 }}>
+                <MapView
+                  region={{
+                    latitude: 37.78825,
+                    longitude: -122.4324,
+                    latitudeDelta: 0.015,
+                    longitudeDelta: 0.0121,
+                  }}
+                  showsMyLocationButton={true}
+                  showsUserLocation={true}
+                  showsCompass={true}
+                  rotateEnabled={true}
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                  }}
+                ></MapView>
+              </View>
+              <View style={{ flex: 1, backgroundColor: 'red' }} />
             </View>
             <View
               style={{
                 alignItems: "center",
                 justifyContent: "center",
-                marginTop: 20,
+                marginTop: 30,
                 position: "absolute",
-                top: Dimensions.get("screen").height - 300,
+                top: Dimensions.get("screen").height - 250,
                 right: 0,
                 left: 0,
                 bottom: 0,
               }}
             >
               <Image
-                style={{ width: "25%", height: "60%", alignSelf: "center" }}
+                style={{ width: '25%', height: '22%', alignSelf: "center" }}
                 source={ImageF}
               />
             </View>
@@ -97,6 +111,7 @@ export default Location;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "white"
   },
   bar: {
     flex: 0.1,
@@ -115,6 +130,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "bold",
     textAlign: "center",
+    paddingTop: '5%'
   },
   input: {
     borderColor: "#5b82e9",
@@ -123,9 +139,11 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: "transparent",
     paddingHorizontal: 15,
+    flex: 1,
     // height: "8%",
     // width: "80%",
-    marginTop: "5%",
+    marginTop: "3%",
+    marginBottom: '3%'
   },
   activeText: {
     color: "#4f93e6",

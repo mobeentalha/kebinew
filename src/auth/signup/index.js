@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, ImageBackground} from 'react-native';
 import Step1 from './step1';
 import Step2 from './step2';
 class SignUp extends Component {
@@ -25,12 +25,30 @@ class SignUp extends Component {
         <View style={styles.image}>
           {this.state.step === '1' && (
             <View style={styles.bar}>
-              <Text style={styles.HeadingText}> SIGN UP </Text>
+               <ImageBackground
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+                source={require('../../../assets/images/top.jpg')}>
+                  <Text style={styles.HeadingText}> SIGN UP </Text>
+              </ImageBackground>
             </View>
           )}
           {this.state.step === '2' && (
             <View style={styles.bar}>
-              <Text style={styles.HeadingText}> Payment Method </Text>
+              <ImageBackground
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+                source={require('../../../assets/images/top.jpg')}>
+                  <Text style={styles.HeadingText}> Payment Method </Text>
+              </ImageBackground>
             </View>
           )}
           {this.state.step === '1' && (
@@ -54,8 +72,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   bar: {
-    marginTop: '15%',
+    marginTop: '0%',
     backgroundColor: '#2cc8de',
+    height: '10%'
   },
   image: {
     width: '100%',
@@ -67,6 +86,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 'bold',
     textAlign: 'center',
+    paddingTop: '5%'
   },
   activeText: {
     color: '#4f93e6',

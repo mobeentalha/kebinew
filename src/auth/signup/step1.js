@@ -32,6 +32,21 @@ class Step1 extends Component {
             style={styles.input}
           />
           <TextInput
+            placeholder="Email"
+            placeholderTextColor="#5b82e9"
+            style={styles.input}
+          />
+          <TextInput
+            placeholder="Phone Number"
+            placeholderTextColor="#5b82e9"
+            style={styles.input}
+          />
+          <TextInput
+            placeholder="Address"
+            placeholderTextColor="#5b82e9"
+            style={styles.input}
+          />
+          <TextInput
             placeholder="City"
             placeholderTextColor="#5b82e9"
             style={styles.input}
@@ -69,7 +84,7 @@ class Step1 extends Component {
           <View style={styles.forget}>
             <Text
               style={styles.text}
-              onPress={() => this.props.onScreenChange('SIGN_IN')}>
+            >
               Have account? SIGN IN!
             </Text>
           </View>

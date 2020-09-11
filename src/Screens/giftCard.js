@@ -12,9 +12,9 @@ import {
 } from 'react-native';
 import {BackF, ImageF} from '../../assets/images';
 
-class CreaditCard extends Component {
+class GiftCard extends Component {
   static navigationOptions = {
-    drawerLabel: 'Credit Card',
+    drawerLabel: 'Gift Card',
     // drawerIcon: ({ tintColor }) => (
     //   <Image
     //     source={ImageF}
@@ -48,7 +48,7 @@ class CreaditCard extends Component {
                 alignItems: 'center',
               }}
               source={require('../../assets/images/top.jpg')}>
-              <Text style={styles.HeadingText}> Creadit Card</Text>
+              <Text style={styles.HeadingText}> KEBI Gift Card</Text>
             </ImageBackground>
           </View>
           <View style={{flex: 1}}>
@@ -60,41 +60,10 @@ class CreaditCard extends Component {
                   justifyContent: 'space-evenly',
                 }}>
                 <TextInput
-                  keyboardType="number-pad"
-                  placeholder="Card No"
+                  placeholder="Card Number"
                   placeholderTextColor="#5b82e9"
                   style={styles.input}
                 />
-                <TextInput
-                  keyboardType="number-pad"
-                  placeholder="Card Title"
-                  placeholderTextColor="#5b82e9"
-                  style={styles.input}
-                />
-                <View
-                  style={{
-                    flexDirection: 'row',
-                    justifyContent: 'space-evenly',
-                  }}>
-                  <TextInput
-                    keyboardType="number-pad"
-                    placeholder="MM"
-                    placeholderTextColor="#5b82e9"
-                    style={styles.input}
-                  />
-                  <TextInput
-                    keyboardType="number-pad"
-                    placeholder="YY"
-                    placeholderTextColor="#5b82e9"
-                    style={styles.input}
-                  />
-                  <TextInput
-                    keyboardType="number-pad"
-                    placeholder="CSV"
-                    placeholderTextColor="#5b82e9"
-                    style={styles.input}
-                  />
-                </View>
                 <View
                   style={{
                     alignItems: 'center',
@@ -136,20 +105,6 @@ class CreaditCard extends Component {
                   </TouchableOpacity>
                 </View>
               </View>
-
-              {/* <View
-                style={{
-                  // flex: 1,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  marginTop: 32,
-                }}>
-                <Image
-                  style={{width: '28%', height: '38%', alignSelf: 'center'}}
-                  source={ImageF}
-                />
-              </View>
-              <View style={{marginBottom: 100}} /> */}
             </ScrollView>
             <View
               style={{
@@ -173,7 +128,7 @@ class CreaditCard extends Component {
     );
   }
 }
-export default CreaditCard;
+export default GiftCard;
 const styles = StyleSheet.create({
   container: {
     flex: 1,

@@ -6,9 +6,10 @@ import {
   Image,
   TextInput,
   TouchableOpacity,
+  ImageBackground
 } from 'react-native';
-import {Root} from 'native-base';
-import {Back, ImageF} from '../../../assets/images';
+import {Back, ImageF, GoogleIcon, FacebookIcon} from '../../../assets/images';
+import {FB, IG, LK, TW, YT} from '../../../assets/images/social-icon'
 class SignIn extends Component {
   constructor(props) {
     super(props);
@@ -21,7 +22,16 @@ class SignIn extends Component {
       <View style={styles.container}>
         <View source={Back} style={styles.image}>
           <View style={styles.bar}>
-            <Text style={styles.HeadingText}> SIGN IN </Text>
+            <ImageBackground
+              style={{
+                width: '100%',
+                height: '100%',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+              source={require('../../../assets/images/top.jpg')}>
+                <Text style={styles.HeadingText}> SIGN IN </Text>
+            </ImageBackground>
           </View>
           <View style={styles.form}>
             <TextInput
@@ -36,7 +46,7 @@ class SignIn extends Component {
             />
             <TouchableOpacity
               style={styles.customButton}
-              onPress={this.props.loginUser}>
+              onPress={() => this.props.navigation.navigate('Home')}>
               <Text style={styles.customButtonText}>LOGIN</Text>
             </TouchableOpacity>
             <View style={styles.forget}>
@@ -46,6 +56,26 @@ class SignIn extends Component {
                 onPress={() => this.props.navigation.navigate('SignUpScreen')}>
                 Don't have account? SIGN UP
               </Text>
+            </View>
+            <View style={styles.socialLogin}> 
+              <TouchableOpacity style={styles.socialButton}> 
+                <Image source={GoogleIcon} style={styles.socialButtonIcon} />
+                <Text style={styles.socialButtonText}> Sign in with Google </Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.socialButton1}> 
+                <Image source={FacebookIcon} style={styles.socialButtonIcon1} />
+                <Text style={styles.socialButtonText1}> Sign in with Facebook </Text>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.socialIconView}>
+              <Text style={styles.socialIconText}> Want to become Service Partner ? Sign Up </Text>
+              <View style={styles.socialIconRow}>
+                <Image source={FB} style={styles.socialIcon} />
+                <Image source={IG} style={styles.socialIcon}  />
+                <Image source={LK} style={styles.socialIcon} />
+                <Image source={TW} style={styles.socialIcon} />
+                <Image source={YT} style={styles.socialIcon} />
+              </View>
             </View>
             <View style={styles.logo}>
               <Image source={ImageF} style={styles.logoImage} />
@@ -60,22 +90,21 @@ export default SignIn;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
   },
   bar: {
-    marginTop: '20%',
+    marginTop: '0%',
     backgroundColor: '#2cc8de',
+    height: '10%'
   },
   image: {
-    width: '100%',
-    height: '100%',
-    backgroundColor: 'white',
+    flex: 1
   },
   HeadingText: {
     color: '#fff',
     fontSize: 30,
     fontWeight: 'bold',
     textAlign: 'center',
+    paddingTop: '5%'
   },
   text: {
     color: '#4f93e6',
@@ -84,11 +113,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   form: {
-    width: '90%',
-    height: '80%',
-    marginLeft: '5%',
-    marginTop: '50%',
     alignItems: 'center',
+    flex: 2,
+    backgroundColor: 'white'
   },
   input: {
     borderColor: '#5b82e9',
@@ -119,19 +146,92 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     width: '80%',
     height: '20%',
-    marginTop: '5%',
     justifyContent: 'center',
   },
   logo: {
     backgroundColor: 'transparent',
     width: '80%',
     height: '15%',
-    marginTop: '35%',
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: '15%'
   },
   logoImage: {
     width: '30%',
-    height: '50%',
+    height: '30%',
   },
+  socialIconView: {
+    width: '80%',
+    height: '10%',
+    justifyContent: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 20
+  },
+  socialIconRow :{
+    flexDirection: 'row',
+    width: '80%',
+    height: '100%',
+  },
+  socialIconText: {
+    marginBottom: 20,
+    color: '#4f93e6',
+    fontSize: 15,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  socialIcon: {
+    width: '15%',
+    height: '45%',
+    marginRight: '5%',
+
+  },
+  socialLogin: {
+    width: '90%',
+    height: '20%',
+    backgroundColor: 'transparent'
+  },
+  socialButton: {
+    backgroundColor: '#0299DA',
+    flexDirection: 'row',
+    width: '100%',
+    height: '30%',
+    borderRadius: 10,
+    marginBottom: '5%',
+    alignItems: 'center'
+  },
+  socialButton1: {
+    backgroundColor: '#000080',
+    flexDirection: 'row',
+    width: '100%',
+    height: '30%',
+    borderRadius: 10,
+    marginBottom: '5%',
+    alignItems: 'center'
+  },
+  socialButtonIcon: {
+    width: '10%',
+    height: '50%',
+    marginLeft: '5%'
+  },
+  socialButtonIcon1: {
+    width: '13%',
+    height: '50%',
+    marginLeft: '4%'
+  },
+  socialButtonText:{
+    color: 'white',
+    fontSize: 20,
+    textAlign: 'center',
+    paddingLeft: 40, 
+    fontWeight: 'bold'
+  },
+  socialButtonText1:{
+    color: 'white',
+    fontSize: 20,
+    textAlign: 'center',
+    paddingLeft: 38, 
+    fontWeight: 'bold'
+  }
+
 });

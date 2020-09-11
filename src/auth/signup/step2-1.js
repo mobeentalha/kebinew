@@ -6,9 +6,10 @@ import {
   Image,
   TouchableHighlight,
   TextInput,
+  ImageBackground
 } from 'react-native';
 import {ImageF, ApplePay, GiftCard, Pay, PayPal} from '../../../assets/images';
-import {Icon, Right} from 'native-base';
+import {Icon} from 'native-base';
 class PaymentOptions extends Component {
   constructor(props) {
     super(props);
@@ -26,6 +27,18 @@ class PaymentOptions extends Component {
     return (
       <View style={styles.form}>
         <View style={styles.form1}>
+        <View style={styles.bar}>
+            <ImageBackground
+              style={{
+                width: '100%',
+                height: '100%',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+              source={require('../../../assets/images/top.jpg')}>
+              <Text style={styles.HeadingText}> Payment Options</Text>
+            </ImageBackground>
+          </View>
           <View style={styles.payementView}>
             <TouchableHighlight
               onPress={() => this.props.navigation.navigate('CreditCard')}>
@@ -34,7 +47,7 @@ class PaymentOptions extends Component {
                   <Image source={Pay} style={styles.icon} />
                 </View>
                 <Text style={styles.text3}> Credit or Debit card </Text>
-                <Icon name="ios-arrow-forward" style={styles.textIcon} />
+                <Icon name="ios-arrow-right" style={styles.textIcon} />
               </View>
             </TouchableHighlight>
             <TouchableHighlight>
@@ -55,7 +68,7 @@ class PaymentOptions extends Component {
                 <Icon name="ios-arrow-forward" style={styles.textIcon} />
               </View>
             </TouchableHighlight>
-            <TouchableHighlight>
+            <TouchableHighlight onPress={() => this.props.navigation.navigate('GiftCard')}>
               <View style={styles.iconViewMain}>
                 <View style={styles.iconView}>
                   <Image source={GiftCard} style={styles.icon} />
@@ -77,13 +90,13 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   bar: {
-    marginTop: '15%',
     backgroundColor: '#2cc8de',
+    height: '10%'
   },
   image: {
-    width: '100%',
-    height: '100%',
-    backgroundColor: 'white',
+    // width: "100%",
+    // height: "100%",
+    flex: 1,
   },
   HeadingText: {
     color: '#fff',

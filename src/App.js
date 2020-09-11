@@ -8,21 +8,23 @@ import {
   TouchableOpacity,
   Alert,
 } from 'react-native';
-import React, {Component} from 'react';
+import React from 'react';
 import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createDrawerNavigator, DrawerItems} from 'react-navigation-drawer';
 
-import CreditCard from './Screens/CreditCard';
 import Home from './Screens/Home';
 import ServiceDetails from './Screens/ServiceDetails';
 import Location from './Screens/Location';
-
 import LoginScreen from './auth/login';
 import SignUpScreen from './auth/signup';
 import Payment from './auth/signup/step2-1';
-
 import SplashScreen from './splashScreen';
+import Rewards from './Screens/rewards';
+import GiftCard from './Screens/giftCard';
+import MyAccount from './Screens/myAccount';
+import KebiPromos from './Screens/promos';
+import HowItWorks from './Screens/howItWorks'
 class Splash extends React.Component {
   componentDidMount() {
     this.Auth();
@@ -49,11 +51,29 @@ const AppStack = createDrawerNavigator(
     Home: {
       screen: Home,
     },
-    CreditCard: {
-      screen: CreditCard,
+    MyAccount: {
+      screen: MyAccount,
+    },
+    Rewards: {
+      screen: Rewards,
+    },
+    KebiPromos: {
+      screen: KebiPromos,
+    },
+    HowItWorks: {
+      screen: HowItWorks,
+    },
+    PayementView: {
+      screen: Payment,
     },
     ServiceDetails: {
       screen: ServiceDetails,
+    },
+    Login: {
+      screen: LoginScreen,
+    },
+    GiftCard: {
+      screen: GiftCard
     },
     Location: {
       screen: Location,
@@ -129,13 +149,12 @@ const Demo = createStackNavigator(
     Home: {
       screen: Home,
     },
-    CreditCard: {
-      screen: CreditCard,
-    },
     Payment: {
       screen: Payment,
     },
-
+    GiftCard: {
+      screen: GiftCard
+    },
     ServiceDetails: {
       screen: ServiceDetails,
     },
@@ -153,7 +172,7 @@ export default createAppContainer(
   createSwitchNavigator(
     {
       Splash: Splash,
-      App: Demo,
+      App: AppStack,
       Auth: AuthStack,
     },
     {
