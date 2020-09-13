@@ -6,7 +6,8 @@ import {
   Image,
   TextInput,
   TouchableOpacity,
-  ImageBackground
+  ImageBackground,
+  Dimensions
 } from 'react-native';
 import {Back, ImageF, GoogleIcon, FacebookIcon} from '../../../assets/images';
 import {FB, IG, LK, TW, YT} from '../../../assets/images/social-icon'
@@ -101,10 +102,10 @@ const styles = StyleSheet.create({
   },
   HeadingText: {
     color: '#fff',
-    fontSize: 30,
+    fontSize: 20,
     fontWeight: 'bold',
     textAlign: 'center',
-    paddingTop: '5%'
+    paddingTop: '10%'
   },
   text: {
     color: '#4f93e6',
@@ -154,7 +155,8 @@ const styles = StyleSheet.create({
     height: '15%',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: '15%'
+    position: 'absolute',
+    top: Dimensions.get('screen').height - 200
   },
   logoImage: {
     width: '30%',
@@ -166,7 +168,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 20
+    position: 'absolute',
+    top: Dimensions.get('screen').height - 250
   },
   socialIconRow :{
     flexDirection: 'row',
@@ -192,7 +195,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent'
   },
   socialButton: {
-    backgroundColor: '#0299DA',
+    backgroundColor: '#2DA6FF',
     flexDirection: 'row',
     width: '100%',
     height: '30%',
@@ -201,7 +204,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   socialButton1: {
-    backgroundColor: '#000080',
+    backgroundColor: '#0070C0',
     flexDirection: 'row',
     width: '100%',
     height: '30%',
@@ -211,12 +214,12 @@ const styles = StyleSheet.create({
   },
   socialButtonIcon: {
     width: '10%',
-    height: '50%',
+    height: '70%',
     marginLeft: '5%'
   },
   socialButtonIcon1: {
-    width: '13%',
-    height: '50%',
+    width: '10%',
+    height: '75%',
     marginLeft: '4%'
   },
   socialButtonText:{

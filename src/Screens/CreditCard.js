@@ -46,51 +46,69 @@ class CreaditCard extends Component {
                 height: '100%',
                 justifyContent: 'center',
                 alignItems: 'center',
+                flexDirection: 'row',
               }}
               source={require('../../assets/images/top.jpg')}>
-              <Text style={styles.HeadingText}> Creadit Card</Text>
+              <TouchableOpacity
+                style={{
+                  backgroundColor: 'transparent',
+                  paddingVertical: 12,
+                  paddingHorizontal: 18,
+                  borderRadius: 10,
+                  width: '25%',
+                  position: 'absolute',
+                  left: '2%',
+                  top: '30%'
+                }}
+                 onPress={() => this.props.navigation.goBack()}>
+                  <Image source={require('../../assets/images/icons/back.png')} />
+              </TouchableOpacity>
+              <Text style={styles.HeadingText}> Creadit Card</Text>  
             </ImageBackground>
           </View>
           <View style={{flex: 1}}>
             <ScrollView>
               <View
                 style={{
-                  // flex: 1,
                   padding: 32,
                   justifyContent: 'space-evenly',
+                  height: '120%'
                 }}>
-                <TextInput
-                  keyboardType="number-pad"
-                  placeholder="Card No"
-                  placeholderTextColor="#5b82e9"
-                  style={styles.input}
-                />
-                <TextInput
-                  keyboardType="number-pad"
-                  placeholder="Card Title"
-                  placeholderTextColor="#5b82e9"
-                  style={styles.input}
-                />
-                <View
-                  style={{
-                    flexDirection: 'row',
-                    justifyContent: 'space-evenly',
-                  }}>
+                <View style={{flex: 2}}>
                   <TextInput
                     keyboardType="number-pad"
-                    placeholder="MM"
+                    placeholder="Card No"
                     placeholderTextColor="#5b82e9"
                     style={styles.input}
                   />
                   <TextInput
                     keyboardType="number-pad"
-                    placeholder="YY"
+                    placeholder="Card Title"
+                    placeholderTextColor="#5b82e9"
+                    style={styles.input}
+                  />
+                </View>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    justifyContent: 'space-evenly',
+                    flex: 2
+                  }}>
+                  <TextInput
+                    keyboardType="number-pad"
+                    placeholder="MM/YY"
                     placeholderTextColor="#5b82e9"
                     style={styles.input}
                   />
                   <TextInput
                     keyboardType="number-pad"
                     placeholder="CSV"
+                    placeholderTextColor="#5b82e9"
+                    style={styles.input}
+                  />
+                  <TextInput
+                    keyboardType="number-pad"
+                    placeholder="Zip/Postal Code"
                     placeholderTextColor="#5b82e9"
                     style={styles.input}
                   />
@@ -109,22 +127,6 @@ class CreaditCard extends Component {
                       paddingHorizontal: 18,
                       borderRadius: 10,
                     }}
-                    onPress={() => this.props.navigation.goBack()}>
-                    <Text
-                      style={{
-                        color: '#fff',
-                        fontSize: 18,
-                      }}>
-                      Back
-                    </Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity
-                    style={{
-                      backgroundColor: '#2cc8de',
-                      paddingVertical: 12,
-                      paddingHorizontal: 18,
-                      borderRadius: 10,
-                    }}
                     onPress={() => this.props.navigation.navigate('Home')}>
                     <Text
                       style={{
@@ -136,20 +138,6 @@ class CreaditCard extends Component {
                   </TouchableOpacity>
                 </View>
               </View>
-
-              {/* <View
-                style={{
-                  // flex: 1,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  marginTop: 32,
-                }}>
-                <Image
-                  style={{width: '28%', height: '38%', alignSelf: 'center'}}
-                  source={ImageF}
-                />
-              </View>
-              <View style={{marginBottom: 100}} /> */}
             </ScrollView>
             <View
               style={{
@@ -193,10 +181,10 @@ const styles = StyleSheet.create({
   },
   HeadingText: {
     color: '#fff',
-    fontSize: 30,
+    fontSize: 20,
     fontWeight: 'bold',
     textAlign: 'center',
-    paddingTop: '5%',
+    paddingTop: '10%',
   },
   input: {
     borderColor: '#5b82e9',
@@ -205,9 +193,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: 'transparent',
     paddingHorizontal: 15,
-    lineHeight: 50,
-    // height: '20%',
-    // width: '100%',
     flex: 1,
     marginTop: '5%',
     marginHorizontal: 4,

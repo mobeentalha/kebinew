@@ -79,72 +79,76 @@ class CreaditCard extends Component {
                   style={{
                     marginTop: 20,
                     padding: 24,
-                    // backgroundColor: "#2cc8de",
                     borderRadius: 20,
+                    height: 150, 
+                    width: 150,
+                    justifyContent: 'center',
+                    alignItems: 'center'
                   }}
                   onPress={() =>
                     this.props.navigation.navigate('ServiceDetails')
                   }>
                   <Image
                     resizeMode="cover"
-                    style={{height: 130, width: 130}}
+                    style={{height: 80, width: 80}}
                     source={require('../../assets/images/icons/L3dp2.png')}
                   />
+                  <Text style={styles.text}> Smart </Text>
+                  <Text style={styles.text}> Wash </Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                   style={{
                     marginTop: 20,
                     padding: 24,
-                    // backgroundColor: "#2cc8de",
                     borderRadius: 20,
+                    height: 150, 
+                    width: 150,
+                    justifyContent: 'center',
+                    alignItems: 'center'
                   }}>
                   <Image
                     resizeMode="cover"
-                    style={{height: 130, width: 130}}
+                    style={{height: 80, width: 80}}
                     source={require('../../assets/images/icons/Lawn3dp-1.png')}
                   />
+                  <Text style={styles.text}> Smart </Text>
+                  <Text style={styles.text}> Maid </Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                   style={{
                     marginTop: 20,
                     padding: 24,
-                    // backgroundColor: "#2cc8de",
                     borderRadius: 20,
+                    height: 150, 
+                    width: 150,
+                    justifyContent: 'center',
+                    alignItems: 'center'
                   }}>
                   <Image
                     resizeMode="cover"
-                    style={{height: 130, width: 130}}
+                    style={{height: 80, width: 80}}
                     source={require('../../assets/images/icons/maid3dp-11.png')}
                   />
+                  <Text style={styles.text}> Smart </Text>
+                  <Text style={styles.text}> Handyman </Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                   style={{
                     marginTop: 20,
                     padding: 24,
-                    // backgroundColor: "#2cc8de",
                     borderRadius: 20,
+                    height: 150, 
+                    width: 150,
+                    justifyContent: 'center',
+                    alignItems: 'center'
                   }}>
                   <Image
                     resizeMode="cover"
-                    style={{height: 130, width: 130}}
+                    style={{height: 80, width: 80}}
                     source={require('../../assets/images/icons/Tool3dp-1.png')}
                   />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  style={{
-                    backgroundColor: '#2cc8de',
-                    paddingVertical: 12,
-                    paddingHorizontal: 18,
-                    borderRadius: 10,
-                  }}
-                  onPress={() => this.props.navigation.goBack()}>
-                  <Text
-                    style={{
-                      color: '#fff',
-                      fontSize: 18,
-                    }}>
-                    Back
-                  </Text>
+                  <Text style={styles.text}> Smart </Text>
+                  <Text style={styles.text}> Lawn </Text>
                 </TouchableOpacity>
               </View>
 
@@ -191,10 +195,10 @@ const styles = StyleSheet.create({
   },
   HeadingText: {
     color: '#fff',
-    fontSize: 30,
+    fontSize: 20,
     fontWeight: 'bold',
     textAlign: 'center',
-    paddingTop: '5%'
+    paddingTop: '10%'
   },
   input: {
     borderColor: '#5b82e9',
@@ -216,10 +220,9 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#4f93e6',
-    fontSize: 15,
+    fontSize: 12,
     fontWeight: 'bold',
     textAlign: 'center',
-    paddingLeft: '5%',
   },
   steps: {
     textAlign: 'center',

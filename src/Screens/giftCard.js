@@ -55,7 +55,7 @@ class GiftCard extends Component {
             <ScrollView>
               <View
                 style={{
-                  // flex: 1,
+                  height: '120%',
                   padding: 32,
                   justifyContent: 'space-evenly',
                 }}>
@@ -66,27 +66,11 @@ class GiftCard extends Component {
                 />
                 <View
                   style={{
-                    alignItems: 'center',
+                    alignItems: 'flex-end',
                     marginTop: '5%',
                     flexDirection: 'row',
-                    justifyContent: 'space-evenly',
+                    justifyContent: 'flex-end',
                   }}>
-                  <TouchableOpacity
-                    style={{
-                      backgroundColor: '#2cc8de',
-                      paddingVertical: 12,
-                      paddingHorizontal: 18,
-                      borderRadius: 10,
-                    }}
-                    onPress={() => this.props.navigation.goBack()}>
-                    <Text
-                      style={{
-                        color: '#fff',
-                        fontSize: 18,
-                      }}>
-                      Back
-                    </Text>
-                  </TouchableOpacity>
                   <TouchableOpacity
                     style={{
                       backgroundColor: '#2cc8de',
@@ -148,10 +132,10 @@ const styles = StyleSheet.create({
   },
   HeadingText: {
     color: '#fff',
-    fontSize: 30,
+    fontSize: 20,
     fontWeight: 'bold',
     textAlign: 'center',
-    paddingTop: '5%',
+    paddingTop: '10%',
   },
   input: {
     borderColor: '#5b82e9',
@@ -160,12 +144,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: 'transparent',
     paddingHorizontal: 15,
-    lineHeight: 50,
-    // height: '20%',
-    // width: '100%',
+    height: '100%',
     flex: 1,
-    marginTop: '5%',
-    marginHorizontal: 4,
     // backgroundColor: 'red',
   },
   activeText: {
