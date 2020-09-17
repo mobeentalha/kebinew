@@ -665,7 +665,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.KebiNew;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kebitechnologies.customerapp;
 				PRODUCT_NAME = KebiNew;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -688,7 +688,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.KebiNew;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kebitechnologies.customerapp;
 				PRODUCT_NAME = KebiNew;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
